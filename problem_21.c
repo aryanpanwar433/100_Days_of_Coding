@@ -5,7 +5,8 @@ int main(){
     printf("Enter number = ");
     scanf("%d",&n);
     for(i=0;i<n;i++){
-        printf("Sum of odd numbers %d\n",sum + (2*i + 1));
+        sum += 2*i + 1;
     } 
+     printf("Sum of first n odd numbers %d\n", sum);
     return 0;
 }
