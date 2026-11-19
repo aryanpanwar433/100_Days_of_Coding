@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int a[100], n, i, x;
+
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    printf("Enter element: ");
+    scanf("%d", &x);
+
+    i = n - 1;
+
+    while(i >= 0 && a[i] > x) {
+        a[i + 1] = a[i];
+        i--;
+    }
+
+    a[i + 1] = x;
+    n++;
+
+    for(i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+
+    return 0;
+}
